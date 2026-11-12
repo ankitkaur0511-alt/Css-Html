@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Card Styles</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #f1f3f5;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      width: 250px;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .card a {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .simple {
+      background: white;
+    }
+
+    .simple a {
+      background: steelblue;
+      color: white;
+    }
+
+    .colorful {
+      background: lightyellow;
+      border: 2px solid orange;
+    }
+
+    .colorful a {
+      background: orange;
+      color: black;
+    }
+
+    .dark {
+      background: #333;
+      color: white;
+    }
+
+    .dark a {
+      background: white;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Card Styles</h1>
+
+  <div class="cards">
+    <article class="card simple">
+      <h2>Simple</h2>
+      <p>A clean white card with a blue link.</p>
+      <a href="#">Read more</a>
+    </article>
+
+    <article class="card colorful">
+      <h2>Colorful</h2>
+      <p>A light card with an orange border.</p>
+      <a href="#">Read more</a>
+    </article>
+
+    <article class="card dark">
+      <h2>Dark</h2>
+      <p>A dark card with a simple white link.</p>
+      <a href="#">Read more</a>
+    </article>
+  </div>
+</body>
+</html>

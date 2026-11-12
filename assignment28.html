@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Examples of handling wide content on a webpage.">
+  <title>Overflow Examples</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+      background: #f0f6f2;
+      color: #263b30;
+    }
+
+    .wrapper {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .card {
+      margin-bottom: 16px;
+      padding: 16px;
+      border: 2px solid #78a88a;
+      border-radius: 10px;
+      background: white;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .long-text {
+      overflow-wrap: anywhere;
+    }
+
+    .table-scroll,
+    pre {
+      overflow-x: auto;
+    }
+
+    table {
+      min-width: 600px;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      border: 1px solid #78a88a;
+      text-align: left;
+    }
+
+    th {
+      background: #e1f0e5;
+    }
+
+    .fixed-box {
+      height: 90px;
+      padding: 10px;
+      overflow-y: auto;
+      border: 1px solid #78a88a;
+      background: #f8fcf9;
+    }
+
+    pre {
+      padding: 12px;
+      background: #e8eee9;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrapper">
+    <h1>Overflow Examples</h1>
+
+    <section class="card">
+      <h2>Responsive Image</h2>
+      <img src="https://picsum.photos/id/28/1000/400" alt="A forest path">
+    </section>
+
+    <section class="card long-text">
+      <h2>Long Text</h2>
+      <p>https://example.com/learn/web-design/responsive-pages-and-layouts</p>
+    </section>
+
+    <section class="card">
+      <h2>Wide Table</h2>
+      <div class="table-scroll">
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Updated</th>
+          </tr>
+          <tr>
+            <td>Project 1</td>
+            <td>Design</td>
+            <td>Bareilly</td>
+            <td>In progress</td>
+            <td>2027</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Scrollable Text</h2>
+      <div class="fixed-box">
+        This box has a set height. When the text is longer than the box, you can scroll inside it to read the rest.
+        Scrollable content stays inside its container.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Code Example</h2>
+      <pre>body { background: #f0f6f2; }</pre>
+    </section>
+  </main>
+</body>
+</html>

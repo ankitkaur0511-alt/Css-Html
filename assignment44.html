@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Visit Bloom Tea House in Bareilly for freshly brewed tea, delicious tea blends, and homemade bakes.">
+  <title>Bloom Tea House | Tea &amp; Homemade Bakes in Bareillyt</title>
+  <style>
+    :root {
+      --cream: #fbf7ef;
+      --paper: #fffdf9;
+      --brown: #382519;
+      --muted: #75675b;
+      --green: #426b49;
+      --gold: #c78532;
+      --line: #e9e0d3;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--brown);
+      font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      border-bottom: 1px solid var(--line);
+      background: #fbf7efeF;
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      color: var(--green);
+      font-family: Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+    }
+
+    .site-nav ul {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .site-nav a {
+      color: var(--muted);
+      font-size: .95rem;
+      font-weight: 650;
+    }
+
+    .site-nav a:hover {
+      color: var(--green);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 10px 20px;
+      border: 1px solid var(--green);
+      border-radius: 999px;
+      background: var(--green);
+      color: white !important;
+      font-weight: 700;
+      transition: transform .2s, background .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      background: #34583b;
+    }
+
+    .hero {
+      padding-block: 62px 74px;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 56px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--green);
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    h1 {
+      max-width: 580px;
+      margin-bottom: 18px;
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      line-height: 1.04;
+      letter-spacing: -.045em;
+    }
+
+    .hero-copy {
+      max-width: 510px;
+      margin-bottom: 26px;
+      color: var(--muted);
+      font-size: 1.12rem;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 430px;
+      border-radius: 48% 48% 20px 20px;
+      object-fit: cover;
+      box-shadow: 0 20px 55px #3825191a;
+    }
+
+    .section {
+      padding-block: 72px;
+    }
+
+    .menu {
+      background: var(--paper);
+    }
+
+    .section-heading {
+      max-width: 620px;
+      margin: 0 auto 36px;
+      text-align: center;
+    }
+
+    .section-heading h2,
+    .about h2,
+    .contact h2 {
+      margin-bottom: 10px;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.15;
+    }
+
+    .section-heading p,
+    .about p {
+      color: var(--muted);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .dish {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--cream);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .dish:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px #38251912;
+    }
+
+    .dish img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .dish-body {
+      padding: 20px;
+    }
+
+    .dish-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .dish h3 {
+      margin-bottom: 6px;
+      font-family: Georgia, serif;
+      font-size: 1.18rem;
+    }
+
+    .dish-price {
+      color: var(--green);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .dish p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 56px;
+    }
+
+    .about img {
+      width: 100%;
+      height: 360px;
+      border-radius: var(--radius);
+      object-fit: cover;
+    }
+
+    .about h2 {
+      text-align: left;
+    }
+
+    .about p {
+      margin-bottom: 0;
+    }
+
+    .contact {
+      padding-block: 62px;
+      background: var(--green);
+      color: white;
+      text-align: center;
+    }
+
+    .contact .eyebrow {
+      color: #e7c98c;
+    }
+
+    .contact h2 {
+      margin-bottom: 12px;
+    }
+
+    .contact p {
+      margin-bottom: 22px;
+      color: #e6eee5;
+    }
+
+    .contact .button {
+      border-color: #fff;
+      background: white;
+      color: var(--green) !important;
+    }
+
+    .contact .button:hover {
+      background: #f3efe6;
+    }
+
+    .site-footer {
+      padding-block: 22px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        min-height: 66px;
+      }
+
+      .site-nav ul {
+        gap: 16px;
+      }
+
+      .site-nav a {
+        font-size: .88rem;
+      }
+
+      .hero {
+        padding-block: 44px 54px;
+      }
+
+      .hero-inner,
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero img {
+        height: 330px;
+        border-radius: var(--radius);
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about img {
+        height: 300px;
+      }
+
+      .section {
+        padding-block: 54px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .wrap {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        padding-block: 12px;
+      }
+
+      .site-nav {
+        width: 100%;
+      }
+
+      .site-nav ul {
+        justify-content: space-between;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .dish img {
+        height: 210px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="#home">🌿 Bloom Tea House</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">Our Tea House</a></li>
+          <li><a href="#contact">Visit us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <p class="eyebrow">Your neighbourhood tea spot</p>
+          <h1>Fresh tea. Warm moments.</h1>
+          <p class="hero-copy">
+            Enjoy freshly brewed tea, delicious tea blends, and homemade bakes
+            in a cosy corner of Bareilly. Come by for a quiet cup or a catch-up
+            with friends.
+          </p>
+          <a class="button" href="#menu">Explore the menu</a>
+        </div>
+        <img
+          src="https://picsum.photos/id/225/900/700"
+          alt="Freshly brewed tea served in a cosy café"
+        >
+      </div>
+    </section>
+
+    <section class="section menu" id="menu">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Made fresh every day</p>
+          <h2>Some café favourites</h2>
+          <p>Freshly brewed tea and something delicious to go with it.</p>
+        </div>
+
+        <div class="menu-grid">
+          <article class="dish">
+            <img
+              src="https://picsum.photos/id/1060/600/450"
+              alt="Freshly brewed masala chai"
+            >
+            <div class="dish-body">
+              <div class="dish-row">
+                <h3>Masala Chai</h3>
+                <span class="dish-price">₹180</span>
+              </div>
+              <p>Black tea brewed with milk and warming spices.</p>
+            </div>
+          </article>
+
+          <article class="dish">
+            <img
+              src="https://picsum.photos/id/292/600/450"
+              alt="Freshly brewed green tea"
+            >
+            <div class="dish-body">
+              <div class="dish-row">
+                <h3>Honey Lemon Green Tea</h3>
+                <span class="dish-price">₹120</span>
+              </div>
+              <p>Green tea served with honey and a squeeze of fresh lemon.</p>
+            </div>
+          </article>
+
+          <article class="dish">
+            <img
+              src="https://picsum.photos/id/312/600/450"
+              alt="Freshly brewed spiced tea"
+            >
+            <div class="dish-body">
+              <div class="dish-row">
+                <h3>Kashmiri Kahwa</h3>
+                <span class="dish-price">₹210</span>
+              </div>
+              <p>A fragrant green tea blend with saffron, almonds, and spices.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="wrap about-inner">
+        <img
+          src="https://picsum.photos/id/431/800/600"
+          alt="Warm and welcoming café interior"
+        >
+        <div>
+          <p class="eyebrow">A little about us</p>
+          <h2>Made for good tea and good company.</h2>
+          <p>
+            Brew Café began as a small corner stall in 2021. Today, it is a
+            cosy place where students, artists, families, and friends can meet
+            over honest food and a comforting cup of tea.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <p class="eyebrow">We’d love to see you</p>
+        <h2>Make yourself at home.</h2>
+        <p>Food PlazA, Bareilly · Open daily, 9 AM–12PM</p>
+        <a class="button" href="tel:+919000000000">Call to reserve</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>© 2026  Bloom Tea House</span>
+      <span>Fresh tea, warm moments.</span>
+    </div>
+  </footer>
+</body>
+</html>

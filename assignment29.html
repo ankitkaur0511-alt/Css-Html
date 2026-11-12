@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the traditional streets of Seoul, South Korea.">
+  <title>Explore South Korea</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 500px;
+      overflow: hidden;
+      color: white;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(212, 168, 168, 0.2));
+      z-index: 1;
+    }
+
+    .nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 32px;
+    }
+
+    .nav a {
+      margin-left: 20px;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .hero__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      width: 90%;
+      max-width: 700px;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+
+    .hero__content h1 {
+      margin-bottom: 16px;
+      font-size: clamp(2rem, 6vw, 4rem);
+    }
+
+    .hero__content p {
+      margin-bottom: 24px;
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 30px;
+      background: #e8784f;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .badge {
+      position: absolute;
+      right: 32px;
+      bottom: 32px;
+      z-index: 3;
+      padding: 12px 20px;
+      border-radius: 10px;
+      background: white;
+      color: #222;
+    }
+
+    .badge strong {
+      display: block;
+      font-size: 1.5rem;
+    }
+
+    .fab {
+      position: fixed;
+      top: 50%;
+      right: 16px;
+      z-index: 10;
+      padding: 8px 12px;
+      border-radius: 50%;
+      background: white;
+      color: #222;
+      text-decoration: none;
+    }
+
+    .next {
+      padding: 64px 32px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero">
+    <img
+      class="hero__bg"
+      src="https://www.travelsewhere.net/wp-content/uploads/2024/06/DSC_0837-2.jpg"
+      alt="Traditional hanok houses along a street in Bukchon, Seoul">
+
+    <nav class="nav">
+      <span class="logo">Korea Travels</span>
+      <div>
+        <a href="#next">Places</a>
+        <a href="#next">Travel tips</a>
+        <a href="#next">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero__content">
+      <h1>Discover South Korea</h1>
+      <p>Walk through Seoul’s historic Bukchon Hanok Village.</p>
+      <a class="btn" href="#next">Explore Seoul</a>
+    </div>
+
+    <div class="badge">
+      <strong>Seoul</strong>
+      South Korea
+    </div>
+  </header>
+
+  <a class="fab" href="#" aria-label="Back to top">↑</a>
+
+  <section class="next" id="next">
+    <h2>Explore South Korea</h2>
+    <p>Discover traditional streets, local food, and beautiful places.</p>
+  </section>
+</body>
+</html>

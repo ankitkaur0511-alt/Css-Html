@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Design Tokens</title>
+
+  <style>
+    /* Change these values to update the whole page */
+    :root {
+      --green: #316b52;
+      --orange: #e17850;
+      --background: #f4f1e8;
+      --card: #ffffff;
+      --text: #202923;
+      --muted: #647169;
+      --space: 16px;
+      --round: 12px;
+    }
+
+    body {
+      margin: 0;
+      padding: 32px;
+      background: var(--background);
+      color: var(--text);
+      font: 16px/1.5 Arial, sans-serif;
+    }
+
+    h1,
+    h2 {
+      margin-top: 0;
+    }
+
+    .card {
+      max-width: 700px;
+      margin: var(--space) auto;
+      padding: 20px;
+      border-radius: var(--round);
+      background: var(--card);
+    }
+
+    .swatches {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .swatch {
+      width: 110px;
+      padding: 14px 10px;
+      border-radius: 8px;
+      color: white;
+    }
+
+    .green {
+      background: var(--green);
+    }
+
+    .orange {
+      background: var(--orange);
+    }
+
+    .muted {
+      background: var(--muted);
+    }
+
+    button {
+      margin-right: 8px;
+      padding: 10px 16px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--green);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    @media (max-width: 500px) {
+      body {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Simple Design Tokens</h1>
+  <p>Tokens are reusable values that help keep a page consistent.</p>
+
+  <section class="card">
+    <h2>Colours</h2>
+    <div class="swatches">
+      <div class="swatch green">Green</div>
+      <div class="swatch orange">Orange</div>
+      <div class="swatch muted">Muted</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Text sizes</h2>
+    <p style="font-size: 24px;">Large text</p>
+    <p>Regular text</p>
+    <p style="font-size: 14px; color: var(--muted);">Small muted text</p>
+  </section>
+
+  <section class="card">
+    <h2>Buttons</h2>
+    <button type="button">Save</button>
+    <button type="button">Continue</button>
+  </section>
+</body>
+</html>

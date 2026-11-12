@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A responsive page that adapts to different screen sizes.">
+  <title>Responsive Design Demo</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #26352f;
+      background: #f3f6f2;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      color: white;
+      background: #285c4d;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 32px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px #00000012;
+    }
+
+    .card h2 {
+      margin-bottom: 8px;
+      color: #285c4d;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 5px 12px;
+      background: #e1f0e6;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .guide {
+      margin-top: 32px;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 12px;
+      border-collapse: collapse;
+      background: white;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid #cbd5cf;
+      text-align: left;
+    }
+
+    th {
+      background: #e1f0e6;
+    }
+
+    @media (max-width: 1024px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 16px;
+      }
+
+      main {
+        padding: 24px 16px;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      table {
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 7px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <strong>Greenpath Studio</strong>
+    <nav>
+      <a href="#welcome">Welcome</a>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 id="welcome">A page for every screen</h1>
+
+    <section class="cards" id="work">
+      <article class="card">
+        <h2>Welcome</h2>
+        <p>A friendly introduction to the site.</p>
+      </article>
+
+      <article class="card" id="about">
+        <h2>About</h2>
+        <p>Learning to build clear, useful websites.</p>
+      </article>
+
+      <article class="card">
+        <h2>Recent work</h2>
+        <p>A collection of small web projects.</p>
+      </article>
+
+      <article class="card" id="contact">
+        <h2>Contact</h2>
+        <p>Get in touch and say hello.</p>
+      </article>
+    </section>
+
+    <span class="badge">Grid adjusts from four columns to one</span>
+
+    <section class="guide">
+      <h2>Responsive layout guide</h2>
+      <table>
+        <tr>
+          <th>Screen width</th>
+          <th>Card layout</th>
+        </tr>
+        <tr>
+          <td>Above 1024px</td>
+          <td>Four columns</td>
+        </tr>
+        <tr>
+          <td>481px to 1024px</td>
+          <td>Two columns</td>
+        </tr>
+        <tr>
+          <td>480px or less</td>
+          <td>One column</td>
+        </tr>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
